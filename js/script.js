@@ -38,6 +38,36 @@
     contactMeBtn.addEventListener("click", handleContactClick);
   }
 
+  // Gallery: show placeholder when image fails or is too small to display
+  function initGalleryPlaceholders() {
+    const galleryImages = document.querySelectorAll(".gallery-media img");
+
+    galleryImages.forEach(function (img) {
+      function showPlaceholder() {
+        const media = img.closest(".gallery-media");
+        if (media) {
+          media.classList.add("is-placeholder");
+        }
+      }
+
+      img.addEventListener("error", showPlaceholder);
+
+      if (img.complete) {
+        if (!img.naturalWidth || img.naturalWidth < 50) {
+          showPlaceholder();
+        }
+      } else {
+        img.addEventListener("load", function () {
+          if (!img.naturalWidth || img.naturalWidth < 50) {
+            showPlaceholder();
+          }
+        });
+      }
+    });
+  }
+
+  initGalleryPlaceholders();
+
   // Initial check in case page loads scrolled
   handleScroll();
 })();

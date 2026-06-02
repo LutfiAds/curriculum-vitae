@@ -97,10 +97,10 @@
     <!-- Skills Section -->
     <section id="skills" class="section-padding section-alt">
       <div class="container">
-        <h2 class="section-title text-center mb-5">Skills</h2>
+        <h2 class="section-title text-center mb-4">Skills</h2>
         <div class="row g-4">
           <div class="col-md-6">
-            <div class="card skill-card h-100 shadow-sm">
+            <div class="card skill-card glass-hover h-100">
               <div class="card-body">
                 <h3 class="h5 card-title text-cyan mb-3">Technical Skills</h3>
                 <!-- Unordered list -->
@@ -116,7 +116,7 @@
             </div>
           </div>
           <div class="col-md-6">
-            <div class="card skill-card h-100 shadow-sm">
+            <div class="card skill-card glass-hover h-100">
               <div class="card-body">
                 <h3 class="h5 card-title text-cyan mb-3">Learning Roadmap</h3>
                 <!-- Ordered list -->
@@ -137,41 +137,62 @@
     <!-- Education Section -->
     <section id="education" class="section-padding">
       <div class="container">
-        <h2 class="section-title text-center mb-5">Education</h2>
-        <!-- First table: Education history -->
-        <div class="table-responsive">
-          <table class="table table-striped table-hover custom-table">
+        <h2 class="section-title text-center mb-2">Education</h2>
+        <h3 class="h6 text-center text-cyan mb-4 education-subtitle">Academic Background</h3>
+        <!-- First table: Education history (exam requirement) -->
+        <div class="table-responsive education-table-wrapper glass-panel glass-hover">
+          <table class="table table-hover custom-table education-table mb-0">
             <thead>
               <tr>
-                <th scope="col">Year</th>
-                <th scope="col">Education</th>
-                <th scope="col">Description</th>
+                <th scope="col" class="col-year">Year</th>
+                <th scope="col" class="col-education">Education</th>
+                <th scope="col" class="col-description">Description</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>2024 - Present</td>
-                <td>IT Major / University Student</td>
-                <td>Focused on learning information technology</td>
+                <td class="education-year">Jul 2021 - May 2024</td>
+                <td class="education-institution">
+                  <strong>SMKN 4 Bogor</strong>
+                  <span class="education-degree d-block">Vocational High School</span>
+                </td>
+                <td class="education-description">
+                  Majored in Computer Systems Networking and Telecommunications. Actively participated
+                  in student organizations and activities such as OSIS, PMR, and ROHIS. Developed basic
+                  skills in router configuration, Microsoft Office, networking fundamentals, and computer
+                  systems.
+                </td>
               </tr>
               <tr>
-                <td>2021 - 2024</td>
-                <td>Senior High School</td>
-                <td>Actively learned computer and networking fundamentals</td>
+                <td class="education-year">Oct 2025 - Present</td>
+                <td class="education-institution">
+                  <strong>Asia Cyber University</strong>
+                  <span class="education-degree d-block">Informatics</span>
+                </td>
+                <td class="education-description">
+                  Currently pursuing a degree in Informatics while continuing to develop technical
+                  knowledge in information technology, cybersecurity, networking, programming, and
+                  digital infrastructure.
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
+        <p class="text-center mt-3 mb-0">
+          <small class="text-muted education-footnote">
+            Education information is presented as part of my personal CV website for the HTML midterm exam project.
+          </small>
+        </p>
       </div>
     </section>
 
     <!-- Experience / Project Section -->
     <section id="experience" class="section-padding section-alt">
       <div class="container">
-        <h2 class="section-title text-center mb-5">Experience &amp; Projects</h2>
+        <h2 class="section-title text-center mb-4">Experience &amp; Projects</h2>
         <!-- Second table: Projects and labs -->
-        <div class="table-responsive">
-          <table class="table table-bordered table-hover custom-table">
+        <div class="table-responsive glass-panel glass-hover">
+          <table class="table table-hover custom-table">
             <thead>
               <tr>
                 <th scope="col">Project</th>
@@ -204,28 +225,46 @@
     <!-- Gallery Section -->
     <section id="gallery" class="section-padding">
       <div class="container">
-        <h2 class="section-title text-center mb-5">Gallery</h2>
+        <h2 class="section-title text-center mb-4">Gallery</h2>
         <!-- Images displayed with Bootstrap cards -->
         <div class="row g-4">
           <div class="col-md-4">
-            <div class="card gallery-card h-100 shadow-sm">
-              <img src="img/profile.jpeg" class="card-img-top gallery-img" alt="Profile photo">
+            <div class="card gallery-card glass-hover h-100">
+              <div class="gallery-media" data-label="Profile">
+                <img src="img/profile.jpeg" class="gallery-img" alt="Profile photo">
+                <div class="gallery-placeholder" aria-hidden="true">
+                  <span class="gallery-placeholder-icon">&#128100;</span>
+                  <span class="gallery-placeholder-text">Profile</span>
+                </div>
+              </div>
               <div class="card-body text-center">
                 <p class="card-text fw-semibold mb-0">Profile</p>
               </div>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card gallery-card h-100 shadow-sm">
-              <img src="img/cyber.jpg" class="card-img-top gallery-img" alt="Cybersecurity theme">
+            <div class="card gallery-card glass-hover h-100">
+              <div class="gallery-media" data-label="Cybersecurity">
+                <img src="img/cyber.jpg" class="gallery-img" alt="Cybersecurity theme">
+                <div class="gallery-placeholder" aria-hidden="true">
+                  <span class="gallery-placeholder-icon">&#128737;</span>
+                  <span class="gallery-placeholder-text">Cybersecurity</span>
+                </div>
+              </div>
               <div class="card-body text-center">
                 <p class="card-text fw-semibold mb-0">Cybersecurity</p>
               </div>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card gallery-card h-100 shadow-sm">
-              <img src="img/network.jpg" class="card-img-top gallery-img" alt="Networking theme">
+            <div class="card gallery-card glass-hover h-100">
+              <div class="gallery-media" data-label="Networking">
+                <img src="img/network.jpg" class="gallery-img" alt="Networking theme">
+                <div class="gallery-placeholder" aria-hidden="true">
+                  <span class="gallery-placeholder-icon">&#127760;</span>
+                  <span class="gallery-placeholder-text">Networking</span>
+                </div>
+              </div>
               <div class="card-body text-center">
                 <p class="card-text fw-semibold mb-0">Networking</p>
               </div>
