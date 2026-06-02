@@ -1,0 +1,323 @@
+/* ============================================
+   CV Website - Custom Styles
+   Theme: IT / Cybersecurity (navy, cyan)
+   ============================================ */
+
+/* CSS Variables - color palette */
+:root {
+  --navy-dark: #0a1628;
+  --navy: #0f2744;
+  --navy-mid: #1a3a5c;
+  --cyan: #00d4ff;
+  --cyan-dark: #00a8cc;
+  --text-light: #e8f4fc;
+  --text-muted: #94a3b8;
+  --section-alt: #0d1f35;
+  --card-bg: #ffffff;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Base typography and smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: var(--navy-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+  padding-top: 70px;
+}
+
+/* Accent text color */
+.text-cyan {
+  color: var(--cyan) !important;
+}
+
+.text-light-opacity {
+  color: rgba(232, 244, 252, 0.85);
+}
+
+/* ============================================
+   Navbar
+   ============================================ */
+.custom-navbar {
+  background: rgba(10, 22, 40, 0.95) !important;
+  backdrop-filter: blur(8px);
+  box-shadow: var(--shadow);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.15);
+}
+
+.custom-navbar .nav-link {
+  color: var(--text-light) !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  transition: color 0.25s ease;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link:focus {
+  color: var(--cyan) !important;
+}
+
+.navbar-brand {
+  color: var(--cyan) !important;
+}
+
+/* ============================================
+   Hero Section
+   ============================================ */
+.hero-section {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  background: linear-gradient(160deg, var(--navy-dark) 0%, var(--navy) 50%, var(--navy-mid) 100%);
+  padding: 4rem 0;
+  position: relative;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero-profile-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border: 4px solid var(--cyan);
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================
+   Buttons
+   ============================================ */
+.btn-cyan {
+  background-color: var(--cyan);
+  color: var(--navy-dark);
+  border: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-cyan:hover {
+  background-color: var(--cyan-dark);
+  color: var(--navy-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.35);
+}
+
+.btn-outline-light:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.15);
+}
+
+.btn-outline-cyan {
+  color: var(--cyan);
+  border: 2px solid var(--cyan);
+  font-weight: 500;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.btn-outline-cyan:hover {
+  background-color: var(--cyan);
+  color: var(--navy-dark);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   Sections - spacing and titles
+   ============================================ */
+.section-padding {
+  padding: 5rem 0;
+}
+
+.section-alt {
+  background-color: var(--section-alt);
+}
+
+.section-title {
+  color: var(--text-light);
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--cyan);
+  margin: 0.75rem auto 0;
+  border-radius: 2px;
+}
+
+.about-text {
+  font-size: 1.05rem;
+  margin-bottom: 1.25rem;
+  color: rgba(232, 244, 252, 0.92);
+}
+
+/* ============================================
+   Cards - skills and gallery
+   ============================================ */
+.skill-card,
+.gallery-card {
+  background: var(--card-bg);
+  color: var(--navy-dark);
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover,
+.gallery-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 212, 255, 0.2);
+}
+
+.skill-list,
+.roadmap-list {
+  margin-bottom: 0;
+  padding-left: 1.25rem;
+}
+
+.skill-list li,
+.roadmap-list li {
+  margin-bottom: 0.5rem;
+}
+
+.gallery-img {
+  height: 220px;
+  object-fit: cover;
+}
+
+/* ============================================
+   Tables
+   ============================================ */
+.custom-table {
+  background: var(--card-bg);
+  color: var(--navy-dark);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.custom-table thead {
+  background: var(--navy);
+  color: var(--text-light);
+}
+
+.custom-table tbody tr:hover {
+  background-color: rgba(0, 212, 255, 0.08);
+}
+
+/* ============================================
+   Contact links
+   ============================================ */
+.contact-link {
+  color: var(--cyan);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+  color: var(--cyan-dark);
+  text-decoration: underline;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+.site-footer {
+  background: var(--navy-dark);
+  border-top: 1px solid rgba(0, 212, 255, 0.15);
+  color: var(--text-muted);
+}
+
+/* ============================================
+   Back to Top button
+   ============================================ */
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: var(--cyan);
+  color: var(--navy-dark);
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background-color 0.2s ease;
+  z-index: 1000;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--cyan-dark);
+  transform: translateY(-3px);
+}
+
+/* ============================================
+   Responsive - mobile devices
+   ============================================ */
+@media (max-width: 768px) {
+  body {
+    padding-top: 56px;
+  }
+
+  .hero-section {
+    min-height: auto;
+    padding: 3rem 0;
+  }
+
+  .hero-profile-img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .section-padding {
+    padding: 3.5rem 0;
+  }
+
+  .display-5 {
+    font-size: 1.75rem;
+  }
+
+  .gallery-img {
+    height: 180px;
+  }
+
+  .back-to-top {
+    width: 44px;
+    height: 44px;
+    bottom: 16px;
+    right: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-buttons .btn {
+    width: 100%;
+    max-width: 220px;
+  }
+}
